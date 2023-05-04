@@ -1,0 +1,31 @@
+body{
+    font-family: 'Inter', sans-serif !important;
+}
+
+.navbar-div{
+    background-color: #1F1F1F;
+}
+
+.navbar-brand{
+    font-size: x-large;
+    font-weight: 600;
+}
+.nav-item{
+    font-weight: 400;
+}
+
+.searchfield{
+    background-color: #3E3E3E !important;
+    border-color: #3E3E3E;
+    
+}
+
+.thin{
+    font-weight: 300;
+}
+
+img{
+    min-height: 170px !important;
+    min-width: 150px !important;
+    border-radius: 10px;
+}

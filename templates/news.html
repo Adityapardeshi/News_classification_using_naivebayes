@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/bootstrap-5.3.0-alpha1-dist/css/bootstrap.css">
+    <script src="../static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles/news.css">
+    <title>NewsX: Home</title>
+</head>
+<body>
+    <!---navbar-->
+    <div class="navbar-div">
+    <nav class="navbar navbar-expand-lg mx-5 py-4">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="/">NewsX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ml-auto mx-4" id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="login">Login</a>
+                    </li>
+                </ul>
+            </div>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2 searchfield text-white" type="search" placeholder="Search"  aria-label="Search"> 
+            </form>
+        </div>
+    </nav>
+</div>
+
+<!--main news section-->
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <h4 class="h4 mt-4">Latest News</h4>
+                <span class="thin" style="font-size:small;">Wednesday, April 12</span>
+                {% for top_article in top_articles %}
+                <div class="card mb-3" style="max-width: 740px;">
+                    <div class="row g-0">
+                      <div class="col-md-6">
+                        <img src={{ top_article['urlToImage']}} class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-6">
+                        <div class="card-body">
+                          <h5 class="card-title">{{ top_article['title']}}</h5>
+                          <p class="card-text">{{ top_article['description']}}</p>
+                          <p class="card-text"><small class="text-muted">{{ top_article['publishedAt']}}</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                  
+            </div>
+            
+            <!--right section-->
+
+            <div class="col-4">
+                <h4 class="h4 mt-4">Trending News</h4>
+                {% for trend_article in trend_articles %}
+                <div class="card text-white bg-dark mt-4 mb-3" style="max-width: fit-content;">
+                    <div class="card-body">
+                        <h5 class="thin" style="font-size: small;">{{ trend_article['source']['name']}}</h5>
+                      <p class="card-text">{{ trend_article['title']}} </p>
+                    </div>
+                  </div>
+                  {% endfor %}
+                 
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

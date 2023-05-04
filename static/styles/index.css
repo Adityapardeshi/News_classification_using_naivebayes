@@ -1,0 +1,120 @@
+body{
+     background-color: #1F1F1F;
+     font-family: 'Inter', sans-serif !important;
+}
+
+
+.navbar-brand{
+    font-size: x-large;
+    font-weight: 600;
+}
+.nav-item{
+    font-weight: 400;
+}
+
+.searchfield{
+    background-color: #3E3E3E !important;
+    border-color: #3E3E3E;
+    
+}
+
+.red{
+    color: #FF7272
+}
+
+.dot {
+    z-index: -2;
+    position: absolute;
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    background-color: #9C9C9C;
+    opacity: 50%;
+    mix-blend-mode: lighten;
+    filter: blur(24px);
+  
+  }
+
+  .x{
+      top: -100px;
+      right: 40rem;
+      opacity: 0.1;     
+      z-index: -2;
+      position: absolute;
+      font-size: 760px;
+      color: #1F1F1F;
+      text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+  }
+
+  
+
+
+
+  .footer_social_area a {
+    border-radius: 50%;
+    height: 40px;
+    text-align: center;
+    width: 40px;
+    display: inline-block;
+    background-color: #f5f5ff;
+    line-height: 40px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-right: 10px;
+}
+.footer_social_area a i {
+    line-height: 36px;
+}
+.footer_social_area a:hover,
+.footer_social_area a:focus {
+    color: #ffffff;
+}
+
+
+
+.single-footer-widget {
+    position: relative;
+    z-index: 1;
+}
+.single-footer-widget .copywrite-text a {
+    color: #FF7272;
+    font-size: 1rem;
+}
+.single-footer-widget .copywrite-text a:hover,
+.single-footer-widget .copywrite-text a:focus {
+    color: rgb(255, 255, 255);
+}
+.single-footer-widget .widget-title {
+    margin-bottom: 1.5rem;
+}
+.single-footer-widget .footer_menu li a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    display: block;
+    font-size: 1rem;
+}
+.single-footer-widget .footer_menu li a:hover,
+.single-footer-widget .footer_menu li a:focus {
+    color : #FF7272
+}
+.single-footer-widget .footer_menu li:last-child a {
+    margin-bottom: 0;
+}
+
+.footer_social_area {
+    position: relative;
+    z-index: 1;
+}
+
+.footer_area {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding:60px;
+}
+.footer_area .row {
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
