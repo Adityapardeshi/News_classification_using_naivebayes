@@ -7,15 +7,79 @@
     <script src="../static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../static/styles/interests.css">
     <title>Choose Categories you like</title>
 </head>
-<body>
-    <div class="btn-group-toggle" data-toggle="buttons">
-        <label class="btn btn-secondary active">
-          <input type="checkbox" checked autocomplete="off"> Checked
-        </label>
-      </div>
+<body class="">
+    <div class="container bg-white">
+        <div class="row">
+                <div class="col-12 pt-5 d-flex align-items-center justify-content-center">
+                    <h1 class="h1">Choose what you love</h1>
+                </div>
+        </div>
+        <div class="container mt-4">
+        <div class="row">
+            <div class="col-6 d-flex align-items-center justify-content-center">
+                <ul class="ks-cboxtags">
+                    <li>
+                        <input type="checkbox" id="Sports" value="Sports">
+                        <label for="Sports">Sports</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 d-flex align-items-center justify-content-center">
+                <ul class="ks-cboxtags">
+                    <li>
+                        <input type="checkbox" id="Entertainment" value="Entertainment">
+                        <label for="Entertainment">Entertainment</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 d-flex align-items-center justify-content-center">
+                <ul class="ks-cboxtags">
+                    <li>
+                        <input type="checkbox" id="Politics" value="Politics">
+                        <label for="Politics">Politics</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 d-flex align-items-center justify-content-center">
+                <ul class="ks-cboxtags">
+                    <li>
+                        <input type="checkbox" id="Crime" value="Crime">
+                        <label for="Crime">Crime</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 d-flex align-items-center justify-content-center">
+                <ul class="ks-cboxtags">
+                    <li>
+                        <input type="checkbox" id="Technology" value="Technology">
+                        <label for="Technology">Technology</label>
+                    </li>
+                </ul>
+                </div>
+            <div class="col-6 d-flex align-items-center justify-content-center">
+                <ul class="ks-cboxtags">
+                    <li>
+                        <input type="checkbox" id="Health" value="Health">
+                        <label for="Health">Health</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <a class="btn-success btn" style="font-size: large; width: 150px">Submit</a>
+            </div>
+        </div>
+    </div>
 </body>
