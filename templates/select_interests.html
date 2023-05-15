@@ -14,6 +14,7 @@
     <title>Choose Categories you like</title>
 </head>
 <body class="">
+    <form method="POST">
     <div class="container bg-white">
         <div class="row">
                 <div class="col-12 pt-5 d-flex align-items-center justify-content-center">
@@ -25,7 +26,7 @@
             <div class="col-6 d-flex align-items-center justify-content-center">
                 <ul class="ks-cboxtags">
                     <li>
-                        <input type="checkbox" id="Sports" value="Sports">
+                        <input type="checkbox" id="Sports" name="checkbox" value="Sports">
                         <label for="Sports">Sports</label>
                     </li>
                 </ul>
@@ -33,7 +34,7 @@
             <div class="col-6 d-flex align-items-center justify-content-center">
                 <ul class="ks-cboxtags">
                     <li>
-                        <input type="checkbox" id="Entertainment" value="Entertainment">
+                        <input type="checkbox" name="checkbox" id="Entertainment" value="Entertainment">
                         <label for="Entertainment">Entertainment</label>
                     </li>
                 </ul>
@@ -43,7 +44,7 @@
             <div class="col-6 d-flex align-items-center justify-content-center">
                 <ul class="ks-cboxtags">
                     <li>
-                        <input type="checkbox" id="Politics" value="Politics">
+                        <input type="checkbox" name="checkbox" id="Politics" value="Politics">
                         <label for="Politics">Politics</label>
                     </li>
                 </ul>
@@ -51,7 +52,7 @@
             <div class="col-6 d-flex align-items-center justify-content-center">
                 <ul class="ks-cboxtags">
                     <li>
-                        <input type="checkbox" id="Crime" value="Crime">
+                        <input type="checkbox" id="Crime" name="checkbox" value="Crime">
                         <label for="Crime">Crime</label>
                     </li>
                 </ul>
@@ -61,7 +62,7 @@
             <div class="col-6 d-flex align-items-center justify-content-center">
                 <ul class="ks-cboxtags">
                     <li>
-                        <input type="checkbox" id="Technology" value="Technology">
+                        <input type="checkbox" id="Technology" name="checkbox" value="Technology">
                         <label for="Technology">Technology</label>
                     </li>
                 </ul>
@@ -69,7 +70,7 @@
             <div class="col-6 d-flex align-items-center justify-content-center">
                 <ul class="ks-cboxtags">
                     <li>
-                        <input type="checkbox" id="Health" value="Health">
+                        <input type="checkbox" id="Health" name="checkbox" value="Health">
                         <label for="Health">Health</label>
                     </li>
                 </ul>
@@ -78,8 +79,9 @@
     </div>
         <div class="row">
             <div class="col-12 d-flex justify-content-center align-items-center">
-                <a class="btn-success btn" style="font-size: large; width: 150px">Submit</a>
+                <button type="submit" class="btn-success btn" style="font-size: large; width: 150px">Submit</>
             </div>
         </div>
     </div>
+</form>
 </body>
