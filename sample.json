@@ -1,0 +1,26 @@
+{
+    "userPreference": [
+        {
+            "email": "asdvasv@d.com",
+            "categories": [
+                "Sports",
+                "Technology",
+                "Health"
+            ]
+        },
+        {
+            "email": "adityapardeshi862@gmail.com",
+            "categories": [
+                "Sports",
+                "Politics"
+            ]
+        },
+        {
+            "email": "adityaopardeshi@gmail.com",
+            "categories": [
+                "Sports",
+                "Entertainment"
+            ]
+        }
+    ]
+}
