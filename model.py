@@ -5,7 +5,7 @@ import json
 
 class user_model():
     def __init__(self):
-        self.conn = mysql.connector.connect(host="localhost", user="root", password="1234", database="newsx")
+        self.conn = mysql.connector.connect(host="localhost", user="root", password="mysql", database="newsx")
         self.conn.autocommit = True
         self.cur = self.conn.cursor(dictionary=True)
         print("success")

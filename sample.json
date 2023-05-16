@@ -14,6 +14,13 @@
                 "Sports",
                 "Politics"
             ]
+        },
+        {
+            "email": "adityaopardeshi@gmail.com",
+            "categories": [
+                "Sports",
+                "Entertainment"
+            ]
         }
     ]
 }
