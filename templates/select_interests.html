@@ -26,7 +26,7 @@
             <div class="col-6 d-flex align-items-center justify-content-center">
                 <ul class="ks-cboxtags">
                     <li>
-                        <input type="checkbox" id="Sports" name="checkbox" value="Sports">
+                        <input type="checkbox" id="Sports" name="checkbox" value="sport">
                         <label for="Sports">Sports</label>
                     </li>
                 </ul>
@@ -34,7 +34,7 @@
             <div class="col-6 d-flex align-items-center justify-content-center">
                 <ul class="ks-cboxtags">
                     <li>
-                        <input type="checkbox" name="checkbox" id="Entertainment" value="Entertainment">
+                        <input type="checkbox" name="checkbox" id="Entertainment" value="entertainment">
                         <label for="Entertainment">Entertainment</label>
                     </li>
                 </ul>
@@ -44,7 +44,7 @@
             <div class="col-6 d-flex align-items-center justify-content-center">
                 <ul class="ks-cboxtags">
                     <li>
-                        <input type="checkbox" name="checkbox" id="Politics" value="Politics">
+                        <input type="checkbox" name="checkbox" id="Politics" value="politics">
                         <label for="Politics">Politics</label>
                     </li>
                 </ul>
@@ -62,7 +62,7 @@
             <div class="col-6 d-flex align-items-center justify-content-center">
                 <ul class="ks-cboxtags">
                     <li>
-                        <input type="checkbox" id="Technology" name="checkbox" value="Technology">
+                        <input type="checkbox" id="Technology" name="checkbox" value="technology">
                         <label for="Technology">Technology</label>
                     </li>
                 </ul>
@@ -76,10 +76,39 @@
                 </ul>
             </div>
         </div>
+        <div class="row">
+            <div class="col-6 d-flex align-items-center justify-content-center">
+                <ul class="ks-cboxtags">
+                    <li>
+                        <input type="checkbox" id="Science" name="checkbox" value="Science">
+                        <label for="Science">Science</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 d-flex align-items-center justify-content-center">
+                <ul class="ks-cboxtags">
+                    <li>
+                        <input type="checkbox" id="business" name="checkbox" value="business">
+                        <label for="business">Business</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
         <div class="row">
-            <div class="col-12 d-flex justify-content-center align-items-center">
+            <h4 class="col-12 d-flex justify-content-center align-items-center"> 
+                Current Choices are:
+                {% for category in categories %}
+                {{ category }}
+                {% endfor %}
+            </h4>
+        </div>
+        <div class="row">
+            <div class="col-6 d-flex justify-content-end align-items-end">
                 <button type="submit" class="btn-success btn" style="font-size: large; width: 150px">Submit</>
+            </div>
+            <div class="col-6 d-flex justify-content-start align-items-start">
+                <button href="/news" class="btn-success btn" style="font-size: large; width: 150px">Skip</>
             </div>
         </div>
     </div>

@@ -32,14 +32,15 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" href="./#contact">Contact</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link text-white" href="login">Login</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
-            <form class="form-inline">
-                <input class="form-control mr-sm-2 searchfield text-white" type="search" placeholder="Search"  aria-label="Search"> 
+            <form action="/logout" method="POST">
+                <button type="submit" class="bg-danger btn" style="color: white;">Logout</button>
             </form>
+            <a href = '/select_interests' class="btn btn-success m-3">Edit choices</a>
         </div>
     </nav>
 </div>
@@ -49,17 +50,22 @@
     <div class="container">
         <div class="row">
             <div class="col-8">
-                <h4 class="h4 mt-4">Latest News</h4>
-                <span class="thin" style="font-size:small;">Wednesday, April 12</span>
+                <h4 class="h4 mt-4">Recommended News</h4>
+                <span class="thin" style="font-size:small;">Saturday, June 3</span>
                 {% for top_article in top_articles %}
                 <div class="card mb-3" style="max-width: 740px;">
                     <div class="row g-0">
                       <div class="col-md-6">
-                        <img src={{ top_article['urlToImage']}} class="img-fluid rounded-start" alt="...">
+                        <!-- <img src={{ top_article['urlToImage']}} class="img-fluid rounded-start" alt="..."> -->
+                        <a href="{{ top_article['url'] }}" target="_blank">
+                            <img src="{{ top_article['urlToImage'] }}" class="img-fluid rounded-start" alt="...">
+                        </a>
                       </div>
                       <div class="col-md-6">
                         <div class="card-body">
-                          <h5 class="card-title">{{ top_article['title']}}</h5>
+                          <!-- <h5 class="card-title">{{ top_article['title']}}</h5> -->
+                          <!-- <h5 class="card-title">{{ top_article['url']}}</h5> -->  
+                          <h5 class="card-title"><a href="{{ top_article['url'] }}" target="_blank">{{ top_article['title'] }}</a></h5>
                           <p class="card-text">{{ top_article['description']}}</p>
                           <p class="card-text"><small class="text-muted">{{ top_article['publishedAt']}}</small></p>
                         </div>
@@ -73,17 +79,15 @@
             <!--right section-->
 
             <div class="col-4">
-                <h4 class="h4 mt-4">Trending News</h4>
+                <h4 class="h4 mt-4">Other News</h4>
                 {% for trend_article in trend_articles %}
                 <div class="card text-white bg-dark mt-4 mb-3" style="max-width: fit-content;">
                     <div class="card-body">
-                        <h5 class="thin" style="font-size: small;">{{ trend_article['source']['name']}}</h5>
+                        <h5 class="thin" style="font-size: small;"><a style="color:white; text-decoration: none;" href="{{ trend_article['url'] }}" target="_blank">{{ trend_article['title'] }}</a></h5>
                       <p class="card-text">{{ trend_article['title']}} </p>
                     </div>
                   </div>
                   {% endfor %}
-                 
-
             </div>
         </div>
     </div>
@@ -91,3 +95,15 @@
 
 </body>
 </html>
+
+
+<!-- 
+{% for trend_article in trend_articles %}
+                <div class="card text-white bg-dark mt-4 mb-3" style="max-width: fit-content;">
+                    <div class="card-body">
+                        <h5 class="thin" style="font-size: small;">{{ trend_article['source']['name']}}</h5>
+                      <p class="card-text">{{ trend_article['title']}} </p>
+                    </div>
+                  </div>
+                  {% endfor %}
+                   -->
