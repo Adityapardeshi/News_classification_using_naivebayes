@@ -28,13 +28,15 @@ y = dataset['Category']
 clf = MultinomialNB()
 clf.fit(X, y)
 
+pickle.dump(vectorizer, open('vectorizer.pkl', 'wb'))
 
+pickle.dump(clf,open('newsmodel.pkl', 'wb'))
 # Load the saved model
-with open('newsmodel.pkl', 'rb') as file:
-    clf = pickle.load(file)
+# with open('newsmodel.pkl', 'rb') as file:
+#     clf = pickle.load(file)
 
-#Input as a News Headline
-#text = input("Enter your News: ")
+# Input as a News Headline
+# text = input("Enter your News: ")
 
 
 # text = re.sub(r'<[^>]*>', '', text) # Remove HTML tags
